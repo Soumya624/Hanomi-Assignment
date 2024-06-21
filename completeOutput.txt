@@ -1,0 +1,58 @@
+Started Loading the File
+Ended Loading the File
+
+Block:
+Bounding Box Coordinates:  {'min': (-27.0, -20.0, -25.361480341145977), 'max': (27.0, 20.0, 25.361480341145977)}
+Total Volume:  15416.684644383844
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Kurbelwelle:
+Bounding Box Coordinates:  {'min': (-31.500000000020147, -8.318405956454688, -9.281802218074322), 'max': (31.500000000020144, 8.318405956454688, 9.281802218074322)}
+Total Volume:  2133.530446392907
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Zylinder:
+Bounding Box Coordinates:  {'min': (-9.99374608886, -10.000000000000433, -13.100000000003956), 'max': (9.99374608886, 10.000000000000433, 13.100000000003952)}
+Total Volume:  2013.382544070749
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Kolben:
+Bounding Box Coordinates:  {'min': (-6.755380379794898, -6.755617756313015, -6.350000000000001), 'max': (6.755380379794898, 6.755617756313015, 6.350000000000001)}
+Total Volume:  946.6139718602813
+Hidden Volume:  16.402365569287483
+Hidden Ratio:  0.01732740700737137
+
+Bolzen:
+Bounding Box Coordinates:  {'min': (-6.0, -1.5, -1.5), 'max': (6.0, 1.5, 1.5)}
+Total Volume:  82.3611382044418
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Pleuel:
+Bounding Box Coordinates:  {'min': (-3.00000000002, -5.547647535004832, -14.782736851772581), 'max': (3.00000000002, 5.547647535004832, 14.78273685177258)}
+Total Volume:  461.0669380374321
+Hidden Volume:  16.40236558716762
+Hidden Ratio:  0.035574803209671865
+
+Deckel:
+Bounding Box Coordinates:  {'min': (-22.5609578321, -12.220552421849138, -12.2), 'max': (22.5609578321, 12.220552421849138, 12.2)}
+Total Volume:  1796.579480641951
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Zylkopf:
+Bounding Box Coordinates:  {'min': (-14.000000000001549, -14.540526494056351, -5.850000000004002), 'max': (14.000000000001549, 14.540526494056351, 5.850000000004009)}
+Total Volume:  3280.6438140814003
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+Rad:
+Bounding Box Coordinates:  {'min': (-4.5000000000029985, -9.565589215011599, -9.565589215011599), 'max': (4.5000000000029985, 9.565589215011599, 9.565589215011599)}
+Total Volume:  1613.8662249003148
+Hidden Volume:  0.0
+Hidden Ratio:  0.0
+
+{'Block': 'Visible', 'Kurbelwelle': 'Visible', 'Zylinder': 'Visible', 'Kolben': 'Visible', 'Bolzen': 'Visible', 'Pleuel': 'Visible', 'Deckel': 'Visible', 'Zylkopf': 'Visible', 'Rad': 'Visible'}

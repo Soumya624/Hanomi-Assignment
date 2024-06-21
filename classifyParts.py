@@ -10,19 +10,23 @@ os.environ['PATH'] += os.pathsep + 'C:/Users/ASUS/miniconda3/envs/hanomiAssignme
 import FreeCAD
 import Part
 
-from getBoundingBox import getBoundingBox
+from getCoordinates import getCoordinates
 
-# Reference: https://forum.freecad.org/viewtopic.php?t=82545
+# Reference: https://forum.freecad.org/viewtopic.php?t=82545 and https://wiki.freecad.org/Part_Feature
 def classifyParts(d):
     partStatus = {}
 
     for i in d.Objects:
         if i.TypeId == 'Part::Feature':
             partName = i.Label
-            print(partName)
-            boundingBox = getBoundingBox(i)
+            # print('\n'+partName+":")
+            
+            iCoordinates = getCoordinates(i)
+            # print('Bounding Box Coordinates: ',iCoordinates)
 
             totalVolume = i.Shape.Volume
+            # print('Total Volume: ',totalVolume)
+
             hiddenVolume = 0
 
             for j in d.Objects:
@@ -30,7 +34,11 @@ def classifyParts(d):
                     common = i.Shape.common(j.Shape)
                     hiddenVolume += common.Volume
 
+            # print('Hidden Volume: ',hiddenVolume)
+
             hiddenRatio = hiddenVolume / totalVolume
+            # print('Hidden Ratio: ',hiddenRatio)
+
             if hiddenRatio > 0.5:
                 partStatus[partName] = 'Hidden'
             else:

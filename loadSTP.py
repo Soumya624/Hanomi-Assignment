@@ -10,13 +10,13 @@ os.environ['PATH'] += os.pathsep + 'C:/Users/ASUS/miniconda3/envs/hanomiAssignme
 import FreeCAD
 import Import
 
-# Reference: https://cultured-geometry-986.notion.site/installation-and-usage-steps-for-freecad-and-occ-83ad60ee068849d3bdfaa0a31670e138
+# Reference: https://cultured-geometry-986.notion.site/installation-and-usage-steps-for-freecad-and-occ-83ad60ee068849d3bdfaa0a31670e138 and https://wiki.freecad.org/FreeCAD_API
 def loadSTP(filename):
-    print('Started Loading')
+    # print('Started Loading the File')
 
     doc = FreeCAD.newDocument('test')
     Import.insert(filename, doc.Name)
     doc.recompute()
     
-    print('Ended Loading')
+    # print('Ended Loading the File')
     return doc

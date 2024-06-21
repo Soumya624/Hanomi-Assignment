@@ -15,18 +15,17 @@ import Part
 from loadSTP import loadSTP
 from classifyParts import classifyParts
 
-if __name__ == '__main__':
-    # Reference: https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/
-    if len(sys.argv) != 2:
-        print("Incorrect Instruction")
-        sys.exit(1)
+# Reference: https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/
+if len(sys.argv) != 2:
+    print("Incorrect Instruction")
+    sys.exit(1)
 
-    else:
-        filepath = sys.argv[1]
-        if not os.path.exists(filepath):
-            print(f"Filepath Doesn't Exist")
-            sys.exit(1)
-        
-        doc = loadSTP(filepath)
-        partStatus = classifyParts(doc)
-        print(partStatus)
+else:
+    filepath = sys.argv[1]
+    if not os.path.exists(filepath):
+        print(f"Filepath Doesn't Exist")
+        sys.exit(1)
+    
+    doc = loadSTP(filepath)
+    partStatus = classifyParts(doc)
+    print(partStatus)

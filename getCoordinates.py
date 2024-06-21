@@ -9,8 +9,8 @@ os.environ['PATH'] += os.pathsep + 'C:/Users/ASUS/miniconda3/envs/hanomiAssignme
 
 import FreeCAD
 
-# Reference: https://wiki.freecad.org/Base_API
-def getBoundingBox(x):
+# Reference: https://wiki.freecad.org/Base_API and http://raytracerchallenge.com/bonus/bounding-boxes.html
+def getCoordinates(x):
     boundBox = x.Shape.BoundBox
 
     xmin = boundBox.XMin
@@ -22,4 +22,13 @@ def getBoundingBox(x):
     zmin = boundBox.ZMin
     zmax = boundBox.ZMax
 
-    return (xmin, ymin, zmin), (xmax, ymax, zmax)
+    xc = 0
+    yc = 0
+    zc = 0
+
+    cuboidCoordinates = {
+        'min': (xmin-xc, ymin-yc, zmin-zc),
+        'max': (xmax-xc, ymax-yc, zmax-zc)
+    }
+
+    return cuboidCoordinates
