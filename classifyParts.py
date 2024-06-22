@@ -11,6 +11,7 @@ import FreeCAD
 import Part
 
 from getCoordinates import getCoordinates
+from isHidden import isHidden
 
 # Reference: https://forum.freecad.org/viewtopic.php?t=82545 and https://wiki.freecad.org/Part_Feature
 def classifyParts(d):
@@ -21,25 +22,20 @@ def classifyParts(d):
             partName = i.Label
             # print('\n'+partName+":")
             
-            iCoordinates = getCoordinates(i)
+            iCoordinates, iBox = getCoordinates(i)
             # print('Bounding Box Coordinates: ',iCoordinates)
 
             totalVolume = i.Shape.Volume
             # print('Total Volume: ',totalVolume)
 
-            hiddenVolume = 0
+            hiddenStatus = 0
 
             for j in d.Objects:
                 if j != i and j.TypeId == 'Part::Feature':
-                    common = i.Shape.common(j.Shape)
-                    hiddenVolume += common.Volume
+                    jCoordinates, jBox = getCoordinates(j)
+                    hiddenStatus = isHidden(iBox, jBox)
 
-            # print('Hidden Volume: ',hiddenVolume)
-
-            hiddenRatio = hiddenVolume / totalVolume
-            # print('Hidden Ratio: ',hiddenRatio)
-
-            if hiddenRatio > 0.5:
+            if hiddenStatus==1:
                 partStatus[partName] = 'Hidden'
             else:
                 partStatus[partName] = 'Visible'

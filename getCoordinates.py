@@ -31,4 +31,4 @@ def getCoordinates(x):
         'max': (xmax-xc, ymax-yc, zmax-zc)
     }
 
-    return cuboidCoordinates
+    return cuboidCoordinates, boundBox
